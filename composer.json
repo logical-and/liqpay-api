@@ -1,0 +1,23 @@
+{
+	"name"             : "and/liqpay-api",
+	"description"      : "LiqPay API",
+	"keywords"         : ["liqpay", "payment"],
+	"version"          : "0.9",
+	"license"          : "GPL-3.0",
+	"require"          : {
+		"php"       : ">=5.3.3",
+		"lib-libxml": ">=2.7.0"
+	},
+	"authors"          : [
+		{
+			"name" : "And",
+			"email": "and.webdev@gmail.com"
+		}
+	],
+	"minimum-stability": "beta",
+	"autoload"         : {
+		"psr-0": {
+			"Liqpay\\": "src"
+		}
+	}
+}
