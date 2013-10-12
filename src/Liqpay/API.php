@@ -7,6 +7,7 @@ use SimpleXMLElement;
 
 class API {
 
+	const PAYMENT_URL              = 'https://www.liqpay.com/?do=clickNbuy';
 	const PAYWAY_LIQPAY            = 1;
 	const PAYWAY_CARD              = 2;
 	const PAYWAY_DELAYED           = 4;
@@ -75,8 +76,8 @@ class API {
 		if ($payway)
 		{
 			if ($payway & self::PAYWAY_CARD) $paywayArray[ ] = 'card';
-			if ($payway & self::PAYWAY_LIQPAY) $payway[ ] = 'liqpay';
-			if ($payway & self::PAYWAY_DELAYED) $payway[ ] = 'delayed';
+			if ($payway & self::PAYWAY_LIQPAY) $paywayArray[ ] = 'liqpay';
+			if ($payway & self::PAYWAY_DELAYED) $paywayArray[ ] = 'delayed';
 			$payway = join(',', $paywayArray);
 		}
 
